@@ -3,38 +3,6 @@ import Draggable, { DraggableCore } from 'react-draggable'; // Both at the same 
 import './App.css'
 class App extends React.Component
 {
-    constructor(props)
-    {
-        super(props)
-        this.state = {
-            shape_count: 1
-        }
-    }
-    drawRectangle = () =>
-    {
-        console.log('here')
-        this.drawcanva()
-        const canvas = document.getElementById(this.state.shape_count)
-        console.log(canvas)
-        const ctx = canvas.getContext("2d")
-        ctx.beginPath();
-        ctx.rect(20, 20, 150, 100);
-        ctx.stroke()
-        this.setState({ shape_count: this.state.shape_count + 1 })
-
-    }
-
-
-    drawCircle = (event) =>
-    {
-        var c = document.getElementById("canvas");
-        var ctx = c.getContext("2d");
-        ctx.beginPath();
-        ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-        ctx.stroke();
-
-    }
-
     drawRect = (id) =>
     {
         console.log('id sent is', id)
